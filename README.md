@@ -1,8 +1,10 @@
-# Textile Factory Energy & Outage Impact Simulator — AI Upgrade
+# Textile Factory Energy & Operations Intelligence System.
 
-This project expands the original Streamlit simulator with a **multi-factory reference library**, a forecast-safe Random Forest training pipeline, transparent ML/statistical forecasting, factory health assessment, peer energy-intensity comparisons, and corrected machine-load optimizer wiring.
+The **Textile Factory Energy & Operations Intelligence System** is a Python-based decision-support application designed to help textile manufacturers analyze energy consumption, estimate financial losses caused by power outages, forecast electricity requirements, assess operational efficiency, and optimize generator power allocation.
 
-> **Important:** The project code is updated, but no trained model or real textile reference library is bundled. A trustworthy model must be trained on verified compatible real-world CSVs. The app explicitly identifies its built-in data as synthetic demo data when no factory CSV is uploaded.
+Built using Streamlit, the system integrates a **multi-factory reference library**, a forecast-safe Random Forest training pipeline, statistical and machine learning forecasting, factory health assessments, peer energy-intensity comparisons, and an improved machine-load optimizer. These features support data-driven decision-making to help factories reduce operational costs, manage electricity outages, and improve overall efficiency.
+
+> **Important:** The Random Forest model can be trained using compatible factory datasets. A trustworthy model must be trained on verified compatible real-world CSVs. The app explicitly identifies its built-in data as synthetic demo data when no factory CSV is uploaded.
 
 ## Features
 
@@ -81,7 +83,7 @@ With three or more reference sources, the script evaluates on a held-out source 
 
 ## 5. Current factory stage
 
-The stage is rule-based and intentionally explainable. It uses the current factory's recent weighted `kWh per metre`, its production trend versus the previous seven rows, and peer energy intensity when peer data is supplied. The categories are relative to the available sample; they are not universal industry standards or an ISO/engineering certification.
+The stage is rule-based and intentionally explainable. It uses the current factory's recent weighted `kWh per metre`, its production trend versus the previous seven rows, and peer energy intensity when peer data is supplied. 
 
 Peer comparisons can be misleading when factories differ in fabric type, process (for example spinning vs weaving vs dyeing), product quality, shifts, machine mix, production units, or reporting intervals. Use peer groups with compatible processes and keep those limitations in mind.
 
@@ -103,7 +105,7 @@ pytest -q
 
 ## 8. Public data sources and licences
 
-See [`DATASET_SOURCES.md`](DATASET_SOURCES.md). Public datasets must be reviewed and transformed carefully; a textile machine-level dataset or a steel plant's energy-only records cannot automatically become a daily textile kWh/metre/outage reference. The app does not claim to be trained on public datasets unless you explicitly import compatible data and run the training script.
+See [`DATASET_SOURCES.md`](DATASET_SOURCES.md). Public datasets must be reviewed and transformed carefully; a textile machine-level dataset or a steel plant's energy-only records cannot automatically become a daily textile kWh/metre/outage reference. 
 
 ## Project structure
 
